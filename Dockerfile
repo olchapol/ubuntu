@@ -1,4 +1,4 @@
-FOR ubuntu
+FROM ubuntu
 
 MAINTAINER Paweł Olchowik <olchapol@wp.pl>
 
