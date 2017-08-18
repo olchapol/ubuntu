@@ -29,9 +29,9 @@ RUN apt-get update && \
     cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
 # Add files.
-ADD root/.bashrc /root/.bashrc
-ADD root/.gitconfig /root/.gitconfig
-ADD root/.scripts /root/.scripts
+#ADD root/.bashrc /root/.bashrc
+#ADD root/.gitconfig /root/.gitconfig
+#ADD root/.scripts /root/.scripts
 
 # Set environment variables.
 ENV HOME /root
