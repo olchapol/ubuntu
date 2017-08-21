@@ -33,9 +33,9 @@ RUN apt-get update && \
     cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
 # MYSQL
-RUN rpmkeys --import https://repo.mysql.com/RPM-GPG-KEY-mysql \
-  && yum install -y $PACKAGE_URL $PACKAGE_URL_SHELL libpwquality \
-  && yum clean all \
+RUN apt-get update \
+  && apt-get install mysql-server \
+  && mysql_secure_installation \
   && mkdir /docker-entrypoint-initdb.d
 
 VOLUME /var/lib/mysql
